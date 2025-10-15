@@ -9,11 +9,12 @@ def printBitWise(str1):
 
 
 
-
-
-
-
-
 if __name__ == "__main__" :
-   base_string = input("give the number")
-   printBitWise(base_string)
+   base_string =input("give the number")
+   if(base_string.isdigit()):
+      printBitWise(base_string)
+   else:
+      try:
+         raise ValueError("only digits are allowed")
+      except ValueError as ve:
+         print("you gay!")
